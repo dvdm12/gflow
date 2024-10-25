@@ -46,4 +46,16 @@ public class Arithmetics {
         return Math.sqrt(number);
     }
 
+    // Factorial (only for non-negative integers)
+    public long factorial(int number) {
+        if (number < 0) {
+            throw new IllegalArgumentException("Factorial of a negative number is not defined.");
+        }
+        long result = 1;
+        for (int i = 1; i <= number; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
 }
